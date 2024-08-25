@@ -13,10 +13,10 @@
                         <div>
                             <label for="title" class="text-black">title</label>
                             <div class="px-2">
-                                <input id="title" name="title" class="shadow p-2 m-2 block w-full" placeholder="Title"><?= $_POST['title'] ?? '' ?> 
+                                <input id="title" name="title" class="shadow p-2 m-2 w-full" placeholder="Title"><?= $_POST['title'] ?? '' ?> 
                                 </input>
                                     <?php if (isset($errors['title'])) : ?>
-                                        <p class="text-red-500 text mt-2"><?= $errors['title'] ?></p>
+                                        <p class="text-red-500 text mt-2"> <?= $errors['title'] ?></p>
                                     <?php endif; ?>
                                 </div>
                             </div>
@@ -27,7 +27,7 @@
                                     <input id="body" name="body" class="m-2 p-2 block w-full shadow"
                                         placeholder="Note goes here"><?= $_POST['body'] ?? '' ?></input>
                                     <?php if (isset($errors['body'])) : ?>
-                                        <p class="text-red-500 text mt-2"><?= $errors['body'] ?></p>
+                                        <p class="text-red-500 text m-2"><?= $errors['body'] ?></p>
                                     <?php endif; ?>
                                 </div>
                             </div>

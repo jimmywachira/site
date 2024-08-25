@@ -6,8 +6,8 @@ use Core\Responce;
 $config = require base_path('config.php');
 $db = new Database($config['database']);
 
-$currentUserId = 2;
-$id = 2 ; # $_GET['id'];
+$currentUserId = 1;
+$id = 1 ; # $_GET['id'];
 
 $query = "select * from notes where id = :id";
 $note = $db->query($query,['id' => $id])->findOrFail();

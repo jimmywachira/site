@@ -11,6 +11,8 @@ spl_autoload_register(function($class){
 
 });
 
+require base_path('bootstrap.php');
+
 //intialize Router
 $router = new \Core\Router();
 
