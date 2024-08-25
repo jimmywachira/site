@@ -11,6 +11,7 @@ spl_autoload_register(function($class){
 
 });
 
+//intialize Router
 $router = new \Core\Router();
 
 $routes = require base_path('routes.php');
