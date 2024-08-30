@@ -6,7 +6,7 @@ require base_path('views/partials/banner.php');
 
 <main>
   <div class="p-2 m-2 border">
-    
+
      <img class="rounded-t-lg" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="">
 
         <div class="card p-3 m-3 border shadow">
@@ -19,21 +19,25 @@ require base_path('views/partials/banner.php');
                     <li class="text-black-600"><?= htmlspecialchars($note['body']); ?> </li>
             </ul>
         </div>
-
+        
         <div>
-            <form action="/note" method="post">
+           
+           <form action="/note" method="post">
                 <input type="hidden" name="_method" value="DELETE">
-                <input type="hidden" name="id" value="<?= $note['id'];?>">
+                <input type="hidden" name="id" value="
+                /*<?= $note['id'];?>*/
+                ">
 
                 <div class="text-right">
-                    <button class="inline-flex text-white rounded border bg-blue-600 py-2 px-4 shadow-sm hover:bg-blue-800"> Edit
-                    </button>
-                    <button class="inline-flex text-white rounded border bg-red-600 py-2 px-4 shadow-sm hover:bg-blue-800"> delete
+                    <button type="submit" class="inline-flex text-white rounded border bg-red-600 py-2 px-6 hover:bg-blue-800"> delete
                     </button>
                 </div>
             </form> 
+
+            <footer class="mt-6">
+            <a href="/note/edit?id=<?= $note['id'] ?>" class="rounded border bg-blue-500 py-2 px-4 text-white hover:bg-blue-700 flex justify-end">edit</a>
+            </footer>
         </div> 
-    
     </div>  
 </main>
 

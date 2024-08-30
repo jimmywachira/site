@@ -25,9 +25,11 @@
                                 <label for="body" class="  text-black-700">Body</label>
                                 <div class="">
                                     <input id="body" name="body" class="m-2 p-2 block w-full shadow"
-                                        placeholder="Note goes here"><?= $_POST['body'] ?? '' ?></input>
-                                    <?php if (isset($errors['body'])) : ?>
-                                        <p class="text-red-500 text m-2"><?= $errors['body'] ?></p>
+                                        placeholder="Note goes here"><?= $_POST['body'] ?? '' ?>
+                                    </input>
+                                    <?php if(isset($errors['body'])) : ?>
+                                    <p class="text-red-500 text m-2"><?= $errors['body'] ?>
+                                    </p>
                                     <?php endif; ?>
                                 </div>
                             </div>

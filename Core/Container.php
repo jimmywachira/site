@@ -4,7 +4,7 @@ namespace Core;
 
 class Container{
 
-    protected $bindings = [];
+    public $bindings = [];
 
     public function bind($key, $resolver){
         $this->bindings[$key] = $resolver;
@@ -16,7 +16,6 @@ class Container{
         }
 
           $resolver = $this->bindings[$key];
-          
           return call_user_func($resolver);
     }
 }

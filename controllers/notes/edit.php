@@ -1,8 +1,7 @@
-<?php 
+<?php
 
 use Core\App;
 use Core\Database;
-use Core\Responce;
 
 $db = App::resolve(Database::class);
 
@@ -14,6 +13,8 @@ $note = $db->query($query,['id' => $id])->findOrFail();
 
 authorize($note['user_id'] === $currentUserId); 
 
-view('notes/show.view.php',[
-        'heading' => 'note',
-        'note' => $note]);
+view('/notes/edit.view.php',[
+    'heading' => "edit notes",
+    'errors' => [],
+    'note' => $note
+    ]);

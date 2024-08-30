@@ -1,14 +1,14 @@
 <?php
 
+use Core\App;
 use Core\Validator;
 use Core\Database;
 
-$config = require base_path('config.php');
-$db = new Database($config['database']);
+$db = App::resolve(Database::class);
 
 $errors = [];
 
-    if(! Validator::string($_POST['body'], 1, 500)){
+    if(!Validator::string($_POST['body'], 1, 500)){
         $errors['body'] = 'a body of nt more than 500 chars is required';
     }
 
