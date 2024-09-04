@@ -35,7 +35,7 @@ require base_path('views/partials/banner.php');
             </form> 
 
             <footer class="mt-6">
-            <a href="/note/edit?id=<?= $note['id'] ?>" class="rounded border bg-blue-500 py-2 px-4 text-white hover:bg-blue-700 flex justify-end">edit</a>
+            <a href="/note/edit?id=<?= $note['id'] ?>" class="rounded border bg-blue-500 py-2 px-4 text-white hover:bg-blue-700 justify-end">edit</a>
             </footer>
         </div> 
     </div>  

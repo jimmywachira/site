@@ -10,5 +10,5 @@ $query = "select * from notes where user_id = :id";
 
 $notes = $db->query($query,['id' => $id])->get();
 
-view('notes/index.view.php',['heading' => "my notes",
+view('notes/index.view.php',['heading' => "notes",
 'notes' => $notes]);
