@@ -35,7 +35,7 @@
                             </div>
                         </div>
 
-                        <div class="bg-white-50 px-4 py-3 text-right sm:px-6">
+                        <div class="bg-white px-4 py-3 text-right sm:px-6">
                             <button
                                 type="submit"
                                 class="border rounded bg-blue-600 px-4 py-2 text-white shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"> Submit

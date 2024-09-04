@@ -1,14 +1,26 @@
 <?php
 
 namespace Core;
+
+use Core\Middleware\Auth;
+use Core\Middleware\Guest;
+
 class Router{
 
     protected $routes = [];
 
     public function add($method ,$uri,$controller){
-        $this->routes[]= compact('method', 'uri','controller');
+        #$this->routes[]= compact('method', 'uri','controller');
+        $this->routes[] = [
+            'method' => $method ,
+            'uri' => $uri,
+            'controller' => $controller,
+            'middleware' => null
+        ];
+
         return $this;
     }
+
     public function get($uri,$controller){
         return $this->add('GET',$uri,$controller);
     }
@@ -30,12 +42,23 @@ class Router{
     }
 
     public function only($key){
-        dd($key);
+        $this->routes[array_key_last($this->routes)]['middleware'] = $key;
+        #dd($this->routes);
+        return $this;
     }
 
     public function route($uri,$method){
         foreach($this->routes as $route){
             if($route['uri'] === $uri && $route['method'] === strtoupper($method)){
+                //apply the middleware
+                if($route['middleware'] == 'guest'){
+                  (new Guest)->handle();
+                }
+
+                if($route['middleware'] == 'auth'){
+                    (new Auth)->handle();
+                }
+
                 return require base_path($route['controller']);
             }
         }
