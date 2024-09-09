@@ -12,5 +12,6 @@ $container->bind('Core\Database', function(){
 });
 
 App::setContainer($container);
-#$db = $container->resolve('Core\Database');
-#$db = App::container()->resolve(Database::class);
+
+//$db = $container->resolve('Core\Database');
+//$db = App::container()->resolve(Database::class);

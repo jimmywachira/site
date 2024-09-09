@@ -31,5 +31,4 @@ $query = "update notes set title = :title, body = :body, user_id = :user_id wher
 
 $db->query($query,['title' => $_POST['title'],'body' => $_POST['body'],'id' => $_POST['id'],'user_id' => 1]);
 
-header("location: /notes");
-die();
+redirect("/notes");

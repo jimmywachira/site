@@ -15,7 +15,7 @@ if (!Validator::email($email)){
 }
 
 if (!Validator::string($password,5,255)){
-    $errors['password']= 'provide a password of atleast 7 chars';
+    $errors['password']= 'provide a password of atleast 5 chars';
 }
 
 if(! empty($errors)){
@@ -31,15 +31,13 @@ $query = "select * from users where email = :email";
 $user = $db->query($query,['email' => $email])->find();
 
 if($user){
-    redirect('/');
+    redirect('/'); 
 } else{
     $query = "insert into users(email,password) values(:email,:password)";
-        $db->query($query,['email' => $email,'password' => $password]);
+    $db->query($query,['email' => $email,'password' => password_hash($password, PASSWORD_BCRYPT)]);
 }
 
 //mark user has logged in 
-$_SESSION['user'] = [
-    'email' => $email
-];
+login(['email' => $email]);
 
 redirect('/');

@@ -40,11 +40,11 @@
                         <div class="text-right p-3 justify-end flex gap-1">
                         <a
                                 href="/notes"
-                                class="border inline-flex rounded bg-blue-600 px-4 py-2 text-white shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"> cancel
+                                class="border inline-flex rounded bg-green-600 px-4 py-2 text-white shadow hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"> cancel
                         </a>
                             <button
                                 type="submit"
-                                class="border rounded bg-blue-600 px-4 py-2 text-white shadow hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"> update
+                                class="border rounded bg-green-600 px-4 py-2 text-white shadow hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"> update
                             </button>
                         </div>
                 </div>

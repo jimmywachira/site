@@ -11,7 +11,7 @@ require base_path('views/partials/banner.php');
 
         <div class="card p-3 m-3 border shadow">
             <ul>
-                    <a href="/note?id=<?= $note['id']; ?>" class="text-blue-600">
+                    <a href="/note?id=<?= $note['id']; ?>" class="text-green-600 border-green">
                         <li>
                             <?= htmlspecialchars($note['title']); ?>
                         </li>
@@ -29,13 +29,13 @@ require base_path('views/partials/banner.php');
                 ">
 
                 <div class="text-right">
-                    <button type="submit" class="inline-flex text-white rounded border bg-red-600 py-2 px-6 hover:bg-blue-800"> delete
+                    <button type="submit" class="inline-flex text-white rounded border bg-red-600 py-2 px-6 hover:bg-green-800"> delete
                     </button>
                 </div>
             </form> 
 
             <footer class="mt-6">
-            <a href="/note/edit?id=<?= $note['id'] ?>" class="rounded border bg-blue-500 py-2 px-4 text-white hover:bg-blue-700 justify-end">edit</a>
+            <a href="/note/edit?id=<?= $note['id'] ?>" class="rounded border bg-green-500 py-2 px-4 text-white hover:bg-green-700 justify-end">edit</a>
             </footer>
         </div> 
     </div>  

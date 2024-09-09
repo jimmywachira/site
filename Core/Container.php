@@ -15,7 +15,7 @@ class Container{
             throw new \Exception("no matching binding found for {$key}");
         }
 
-          $resolver = $this->bindings[$key];
-          return call_user_func($resolver);
+        $resolver = $this->bindings[$key];
+        return call_user_func($resolver);
     }
 }
