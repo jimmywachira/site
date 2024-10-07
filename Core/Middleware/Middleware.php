@@ -19,7 +19,6 @@ class Middleware{
         if(!$middleware){
             throw new \Exception("no matching middleware found for key '{$key}'.");
         }
-
         
         (new $middleware)->handle();
     }

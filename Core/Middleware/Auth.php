@@ -7,5 +7,5 @@ class Auth{
     if(!$_SESSION['user'] ?? false){
         redirect('/');
         }
-   } 
+   }
 }

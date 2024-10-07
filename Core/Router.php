@@ -3,8 +3,6 @@
 namespace Core;
 
 use Core\Middleware\Middleware;
-use Core\Middleware\Auth;
-use Core\Middleware\Guest;
 
 class Router{
 
@@ -55,7 +53,7 @@ class Router{
                    Middleware::resolve($route['middleware']);
                 }
                 
-            /* 
+/* 
                 $middleware = Middleware::MAP[$route['middleware']];
                 (new $middleware)->handle();
                 //apply the middleware
@@ -63,23 +61,22 @@ class Router{
                   (new Guest)->handle();}
                 if($route['middleware'] == 'auth'){
                     (new Auth)->handle();}
-            */
+*/
 
-                return require base_path($route['controller']);
+                return require base_path('Http/Controllers/' . $route['controller']);
             }
         }
         $this->abort();
     }
     public function abort($code = 404){
         http_response_code($code);
-        require base_path("views/{$code}.php");
+        require base_path("views/{$code}.php"); 
         die();
     }
 }
 
 /* 
-
-//routing with a function(uri, routes(ass. array))
+#routing with a function(uri, routes(ass. array))
 function routeToController($uri,$routes){
     if(array_key_exists($uri,$routes)){
         require base_path($routes[$uri]);

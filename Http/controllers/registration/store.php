@@ -14,8 +14,8 @@ if (!Validator::email($email)){
     $errors['email']= 'provide a valid email address';
 }
 
-if (!Validator::string($password,5,255)){
-    $errors['password']= 'provide a password of atleast 5 chars';
+if (!Validator::string($password,8,255)){
+    $errors['password']= 'provide a password of atleast 8 chars';
 }
 
 if(! empty($errors)){
@@ -26,14 +26,14 @@ if(! empty($errors)){
 $db = App::container()->resolve(Database::class);
 
 //check if account already exists
-$query = "select * from users where email = :email";
+$query = "select * from user where email = :email";
 
 $user = $db->query($query,['email' => $email])->find();
-
+#dd($user);
 if($user){
-    redirect('/'); 
+    redirect('/login');    
 } else{
-    $query = "insert into users(email,password) values(:email,:password)";
+    $query = "insert into user(email,password) values(:email,:password)";
     $db->query($query,['email' => $email,'password' => password_hash($password, PASSWORD_BCRYPT)]);
 }
 
