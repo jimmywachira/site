@@ -5,7 +5,7 @@ use Core\App;
 use Core\Database;
 class Authenticator{
     public function attempt($email,$password){
-        //check whether credentials matches
+        #check whether credentials matches
         $query = "select * from user where email = :email";
         
         $user = App::container()->resolve(Database::class)->query($query,['email' => $email])->find();
@@ -13,7 +13,7 @@ class Authenticator{
         if($user){
             if(password_verify($password,$user['password'])){
                 $this->login(['email' => $email]);
-                
+                #redirect('/');
                 return true;
         }} 
         return false;
@@ -25,12 +25,13 @@ class Authenticator{
             ];
             session_regenerate_id(true);
         }
-    }
+    
         
-        public function logout(){
+    public function logout(){
             $_SESSION = [];
         
             session_destroy();
             $params = session_get_cookie_params();
             setcookie('PHPSESSID', '', time() - 3600, $params['path'], $params['domain'], $params['secure'], $params['httponly']);
         }
+    }
