@@ -30,18 +30,19 @@ require base_path('views/partials/nav.php');
                 </div>
             </div>
 
-            <div>
-                <button type="submit" class="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">login</button>
-            </div>
             <ul>
                     <?php if (isset($errors['email'])) : ?>
-                        <li class="text-red-500 text-xs mt-2"><?= $errors['email'] ?></li>
+                        <li class="lowercase text-red-500 mt-1"><?= $errors['email'] ?></li>
                     <?php endif; ?>
 
                     <?php if (isset($errors['password'])) : ?>
-                        <li class="text-red-500 text-xs mt-2"><?= $errors['password'] ?></li>
+                        <li class="text-red-500 mt-1 lowercase"><?= $errors['password'] ?></li>
                     <?php endif; ?>
                 </ul>
+        
+            <div>
+                <button type="submit" class="flex w-full justify-center rounded-md bg-green-600 px-3 py-1.5 leading-6 text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">login</button>
+            </div>
             </form>
         </div>
         </div>

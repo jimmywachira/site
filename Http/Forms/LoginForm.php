@@ -12,7 +12,7 @@ public function validate($email,$password){
     }
 
     if (!Validator::string($password,1,8)){
-        $this->errors['password']= 'password is not correct';
+        $this->errors['password']= 'wrong password';
     }
     return empty($this->errors);
     }
