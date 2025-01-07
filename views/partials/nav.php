@@ -9,14 +9,14 @@
                     <div class="ml-10 flex items-baseline space-x-4">
                         <!-- Current: "bg-green-900 text-white", Default: "text-green-300 hover:bg-green-700 hover:text-white" -->
                         <a href="/"
-                           class="<?= urlIs('/') ? 'text-white' : 'text-black-400' ?> hover:bg-green-800 hover:text-white p-2 m-2 rounded-md">Home</a>
+                           class="<?= urlIs('/') ?'text-white' : 'text-black-400' ?> hover:bg-green-800 hover:text-white p-2 m-2 rounded-md">Home</a>
 
                         <a href="/about"
-                           class="<?= urlIs('/about') ? 'text-white' : 'text-black-400' ?> hover:bg-green-800 hover:text-white p-2 m-2 rounded-md"> about </a>
+                           class="<?= urlIs('/about') ? 'text-white' : 'text-black-400' ?> hover:bg-green-800 hover:text-white p-2 m-2 rounded-md"> About </a>
 
                         <?php if ($_SESSION['user'] ?? false) : ?>
                             <a href="/notes"
-                               class="<?= urlIs('/notes') ? 'text-white' : 'text-black-400' ?> hover:bg-green-800 hover:text-white p-2 m-2 rounded-md">Notes</a>
+                               class="<?= urlIs('/notes') ? 'text-white' : 'text-black-400' ?> hover:bg-green-800 hover:text-white p-2 m-2 rounded-md">blog</a>
                         <?php endif ?>
                         
                     </div>

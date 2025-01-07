@@ -16,7 +16,7 @@ require "../views/partials/banner.php";
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt sunt atque quos nemo?  In distinctio facilis sapiente, voluptatem rem dolorum eveniet quibusdam nam povident itaque aspernatur et magni facere labore!
               </p>
 
-              <h2 class="p-2 camelcase text-right  text-green-800 m-2 mb-1"> - <?= $_SESSION['user']['email'] ? 'signedIn':'guest' ?>
+              <h2 class="p-2 m-2 lowercase text-right  text-green-800s"> > <?= $_SESSION['user']['email'] ?? 'Guest' ?>
               </h2>
 
           </div>
