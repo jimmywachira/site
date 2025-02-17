@@ -2,7 +2,6 @@
 
 namespace Http\Forms;
 use Core\Validator;
-
 class LoginForm{
 protected $errors = [];
 public function validate($email,$password){
