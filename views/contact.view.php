@@ -3,17 +3,20 @@ require "../views/partials/head.php";
 require "../views/partials/nav.php";
 require "../views/partials/banner.php"; 
 ?>
+<main>
+  <section class="p-2 m-2">
+    <article>
+        <div class="card shadow">
+        <img class="full" src="https://flowbite.com/docs/images/blog/image-3.jpg" alt="">
+          <h1 class="text-green-700 p-2 m-2"> leading designers in africa!</h1>
 
-<div class="p-4 m-4">
-
- <h1 class="p-2 m-2 text-green-800">folllow us on our socials </h1>
-
- <p class="p-2 m-2">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt sunt atque quos nemo?  In distinctio facilis sapiente, voluptatem rem dolorum eveniet quibusdam nam povident itaque aspernatur et magni facere labore!
-        </p>
+          <p class="p-2 m-2 font-xl">
+          known for their analytical minds, practical nature, and attention to detail. They are often perfectionists and enjoy organizing and improving things.
+          </p>
+        </div>
+    </article>
+  </section>
 </div>
-    
-<?php require "../views/partials/footer.php";?>
+</main>  
 
-</body>
-</html>
+<?php require "../views/partials/footer.php";?>

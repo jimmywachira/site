@@ -6,8 +6,8 @@ require base_path('views/partials/nav.php');
 
 <main>
     <div class="flex min-h-full flex-col justify-center px-6 py-8 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/plus/img/logos/mark.svg?color=black&shade=500" alt="Your Company">
+    <div class="flex min-h-full flex-col justify-center px-3 py-4 lg:px-4">
+    <img class="h-8 w-auto" src="https://tailwindui.com/plus-assets/img/logos/mark.svg?color=black&shade=600" alt="">
             <h2 class="mt-5 text-center text-2xl font-bold leading-9 tracking-tight">log in</h2>
         </div>
 

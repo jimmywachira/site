@@ -2,11 +2,10 @@
 
 use Core\App;
 use Core\Database;
-use Core\Responce;
 
 $db = App::resolve(Database::class);
 
-$currentUserId = 1;
+$currentUserId = 2;
 $id = $_GET['id'];
 
 $query = "select * from notes where id = :id";

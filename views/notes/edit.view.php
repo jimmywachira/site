@@ -9,26 +9,27 @@
         <div class="mt-5 md:col-span-2 md:mt-0">
             <form method="POST" action="/note">
                 <input type="hidden" name="_method" value="PATCH">
+                
                 <input type="hidden" name="id" value="<?= $note["id"]?>">
-                <input type="hidden" name="id" value="<?= $note['id']?>">
+
                 <div class="shadow rounded">
                         <div class="p-2 m-2 border">
                         <div class="mt-1 px-2">
                             <label for="title">title</label>
                             <div>
-                                <textarea id="title" name="title" class="shadow p-2 m-2 w-full" placeholder="Title">
-                                <?= $note['title'];?> 
-                                </textarea>
-                                    <?php if (isset($errors['title'])) : ?>
+                                <input id="title" name="title"class="shadow p-2 m-2 w-full" placeholder="<?= $note['title'];?> ">
+                                
+                                </input>
+                                    <?php if (isset($errors['title'])): ?>
                                         <p class="text-red-500 text mt-2"> <?= $errors['title'] ?></p>
                                     <?php endif; ?>
                                 </div>
                           
                                 <label for="body">Body</label>
-                                <div class="">
-                                    <textarea id="body" name="body" class="m-2 p-2 block w-full shadow"
-                                        placeholder="Note goes here">
-                                        <?= $note['body']; ?>
+                                <div class="mt-1">
+                                    <textarea id="body" name="body" class="shadow p-2 m-2 w-full"
+                                    placeholder="Note goes here">
+                                    <?= htmlspecialchars($note['body']); ?>
                                     </textarea>
                                     <?php if (isset($errors['body'])) : ?>
                                         <p class="text-red-500 text m-2"><?= $errors['body'] ?></p>

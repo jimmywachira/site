@@ -5,11 +5,11 @@ require "../views/partials/banner.php";
 ?>
 
 <main>
-  <div class="p-4 m-4">
+  <div class="p-2 m-4">
     <section>
       <article>
           <div class="card shadow">
-              <img class="" src="https://flowbite.com/docs/images/blog/image-1.jpg" alt="">
+              <img class="full" src="https://flowbite.com/docs/images/blog/image-3.jpg" alt="">
 
               <h1 class="pt-4 m-4 text-green-800 mb-1"> Lorem Ipsum </h1>
               <p class="p-1 m-1">
@@ -25,4 +25,4 @@ require "../views/partials/banner.php";
   </div>
 </main> 
 
-<?php require "../views/partials/footer.php";?>
+<?php require "../views/partials/footer.php"; ?>

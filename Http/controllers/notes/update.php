@@ -6,12 +6,12 @@ use Core\Validator;
 
 $db = App::resolve(Database::class);
 
-$currentUserId = 1;
+$currentUserId = 2;
 
 $query = "select * from notes where id = :id";
 $note = $db->query($query,['id' => $_POST['id']])->findOrFail();
 
-authorize($note['user_id'] === $currentUserId); 
+authorize($note['user_id'] === $currentUserId);
 
 $errors = [];
 
@@ -25,10 +25,10 @@ if(count($errors)){
             'errors'=> $errors,
             'note' => $note
             ]);
-    } 
+    }
 
 $query = "update notes set title = :title, body = :body, user_id = :user_id where id = :id ";
 
-$db->query($query,['title' => $_POST['title'],'body' => $_POST['body'],'id' => $_POST['id'],'user_id' => 1]);
+$db->query($query,['title' => $_POST['title'],'body' => $_POST['body'],'id' => $_POST['id'],'user_id' => $currentUserId]);
 
 redirect("/notes");

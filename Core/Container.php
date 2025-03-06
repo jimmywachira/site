@@ -2,7 +2,7 @@
 
 namespace Core;
 
-class Container{
+class Container{ 
 
     public $bindings = [];
 
@@ -12,7 +12,7 @@ class Container{
 
     public function resolve($key){
         if(!array_key_exists($key, $this->bindings)){
-            throw new \Exception("no matching binding found for {$key}");
+            throw new \Exception("no matching binding found for :{$key}");
         }
 
         $resolver = $this->bindings[$key];

@@ -5,11 +5,12 @@ require "../views/partials/banner.php";
 ?>
 
 <main>
-  <div class="p-4 m-4">
+  <div class="p-2 m-2">
     <section>
       <article>
           <div class="card shadow">
-            <h1 class="text-center text-green-700 p-2 m-2"> leading designers in africa!</h1>
+          <img class="full" src="https://flowbite.com/docs/images/blog/image-3.jpg" alt="">
+            <h1 class="text-green-700 p-2 m-2"> leading web designers in africa!</h1>
 
             <p class="p-2 m-2 font-xl">
             known for their analytical minds, practical nature, and attention to detail. They are often perfectionists and enjoy organizing and improving things.

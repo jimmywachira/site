@@ -37,7 +37,6 @@ if($user){
     $db->query($query,['email' => $email,'password' => password_hash($password, PASSWORD_BCRYPT)]);
 }
 
-//mark user has logged in 
 login(['email' => $email]);
 
-redirect('/');
+redirect('/notes');
